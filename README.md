@@ -2837,10 +2837,11 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans
         var ob = document.getElementById('onboarding-screen');
         if (auth) { auth.classList.remove('visible'); auth.style.display = 'none'; }
         if (isNew && ob) {
+            // Nuovo utente: mostra onboarding (4 step di benvenuto)
             ob.classList.add('visible');
             ob.style.display = 'flex';
         } else {
-            // Entra direttamente nell'app
+            // Utente già registrato: vai direttamente alla home
             if (typeof switchPage === 'function') switchPage('feed');
         }
     }
