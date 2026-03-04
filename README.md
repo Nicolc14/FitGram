@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -2717,8 +2716,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans
     }
     function doLogout() {
         if(!confirm('Vuoi uscire dal tuo account?')) return;
-        // Cancella i dati di accesso
-        FG_STORE.removeItem(FGKEY);
+        // NON cancellare i dati — solo segna come non loggato
         isGuest = true;
         // Mostra schermata di accesso
         var auth = document.getElementById('auth-screen');
