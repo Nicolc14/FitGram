@@ -1,4 +1,3 @@
-[fitgram_fixed (6).html](https://github.com/user-attachments/files/25742776/fitgram_fixed.6.html)
 <!DOCTYPE html>
 <html lang="it">
 <head>
