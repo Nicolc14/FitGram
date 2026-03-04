@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>FitGram PRO - The Ultimate Challenge</title>
+    <!-- Icona per iPhone (Apple Touch Icon) -->
+    <link rel="apple-touch-icon" href="fitgram-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fitgram-icon.png">
+    <!-- Icona generica browser -->
+    <link rel="icon" type="image/png" href="fitgram-icon.png">
+    <!-- Nome app quando aggiunta alla home -->
+    <meta name="apple-mobile-web-app-title" content="FitGram">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Dancing+Script:wght@700&family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
