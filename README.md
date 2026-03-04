@@ -1,4 +1,4 @@
-[fitgram_fixed (4).html](https://github.com/user-attachments/files/25742404/fitgram_fixed.4.html)
+[fitgram_fixed (5).html](https://github.com/user-attachments/files/25742605/fitgram_fixed.5.html)
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -13,33 +13,11 @@
     </style>
     <style>
         :root { --neon: #00F5FF; --dark-green: #004d4d; }
-        /* Fix layout mobile: tutti i pannelli fixed centrati */
-        #splash-screen, #auth-screen, #onboarding-screen,
-        #sidebar, #user-profile-page, #page-users,
-        #chat-match-page, #post-viewer, #register-wall,
-        #result-modal, #trophy-modal {
-            max-width: 430px !important;
-            left: 50% !important;
-            transform: translateX(-50%) !important;
-            right: auto !important;
+        /* Foto profilo sempre cerchio perfetto */
+        #profile-img, #up-avatar, #edit-avatar-preview {
+            width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
         }
-        #sidebar.open { transform: translateX(-50%) !important; }
-        #user-profile-page.open { transform: translateX(-50%) !important; }
-        #page-users.open { transform: translateX(-50%) translateY(0) !important; }
-        #chat-match-page.open { transform: translateX(-50%) !important; }
-        #post-viewer { transform: translateX(-50%) translateY(100%) !important; }
-        #post-viewer[style*="translateY(0)"] { transform: translateX(-50%) translateY(0) !important; }
-        /* Bottom nav centrata */
-        #bottom-nav {
-            max-width: 430px !important;
-            left: 50% !important;
-            transform: translateX(-50%) !important;
-            right: auto !important;
-        }
-        /* Profile CTA */
-        #profile-cta {
-            max-width: 382px !important;
-        }
+
         body { 
             font-family: 'Inter', sans-serif; min-height: 100vh; 
             background: linear-gradient(0deg, #000 0%, #004d4d 25%, #fff 65%); 
@@ -517,7 +495,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans
     var isGuest = false;
     </script>
 </head>
-<body style="max-width:430px;margin:0 auto;position:relative;min-height:100vh;overflow-x:hidden;">
+<body class="max-w-md mx-auto">
 
     <!-- TOAST -->
     <div id="toast"></div>
@@ -2351,12 +2329,12 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans
                 </div>`).join('');
             // Apri con animazione
             viewer.classList.remove('hidden');
-            setTimeout(() => viewer.classList.add('pv-open'), 10);
+            setTimeout(() => viewer.style.transform = 'translateY(0)', 10);
         }
 
         function closeLightbox() {
             const viewer = document.getElementById('post-viewer');
-            viewer.classList.remove('pv-open');
+            viewer.style.transform = 'translateY(100%)';
             setTimeout(() => viewer.classList.add('hidden'), 350);
         }
 
